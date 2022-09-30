@@ -1,11 +1,26 @@
-import React from 'react' 
+import React, {useState, useEffect } from 'react' 
 
 import { Row, Col, } from 'react-bootstrap'
-import coursedb from '../coursedb'
+// import coursedb from '../coursedb'
 import CourseCard from '../components/CourseCard'
 import studyy from '../media/studyy.jpg'
 
+import axios from 'axios'
+
 function CoursePage() {
+  const [coursedb, setCourses] = useState([])
+
+  useEffect(() => {
+
+    async function fetchCourses(){
+
+      const { data } = await axios.get(`/api/courses/`)
+      setCourses(data)
+    }
+
+    fetchCourses()
+    
+  },[])
   return (
     <div> 
         <div width='100%'>

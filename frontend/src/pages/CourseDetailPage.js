@@ -1,16 +1,29 @@
-import React from 'react'
-import coursedb from '../coursedb'
+import React, {useState, useEffect}from 'react'
+// import coursedb from '../coursedb'
 import { useParams } from 'react-router' 
 import {Container, Row, Col, Button, Card  } from 'react-bootstrap'
 import face2 from '../media/face2.jpg'
+
+import axios from 'axios'
 
 
 
 
 function CourseDetailPage() {
-    const {id} = useParams();
-    const course = coursedb.find((c) => c._id === (id) )
+  const [course, setCourse] = useState([])
+  const { id } = useParams()
 
+  useEffect(() => {
+
+    async function fetchCourses(){
+
+      const { data } = await axios.get(`/api/courses/${encodeURIComponent(id)}`)
+      setCourse(data)
+    }
+
+    fetchCourses()
+    
+  },[id])
     
   return (
     <div> 
