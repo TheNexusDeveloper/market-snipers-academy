@@ -1,4 +1,4 @@
-import { Container } from 'react-bootstrap';
+// import { Container } from 'react-bootstrap';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -14,7 +14,6 @@ function App() {
     <Router>
       <Header /> 
       <main className='py-0'>
-        <Container fluid>
           <Routes>
             <Route path='/' element={ <HomePage />} exact></Route>
             <Route path='/Courses' element={ <CoursePage/> }></Route>
@@ -23,7 +22,6 @@ function App() {
             <Route path='/blog/:id' element={ <BlogDetailPage/> }></Route>
             
           </Routes>
-        </Container>
       </main>
       <Footer />
     </Router>

@@ -1,57 +1,54 @@
 import React from 'react';
-import { Container, Nav, Navbar, NavDropdown, Offcanvas } from 'react-bootstrap';
+import { Container, Nav, Navbar, NavDropdown, } from 'react-bootstrap';
 
 import { LinkContainer } from 'react-router-bootstrap';
+import { Link } from 'react-router-dom';
 
+
+const options = {
+  backgroundColor: "rgba(0, 0, 0, 0.9)",
+
+  
+}
 
 function Header() {
   return (
     <header> 
-        <Navbar bg="black" variant= "dark" expand='lg' className="py-4 border border-0">
-          <Container fluid>
-            <LinkContainer to='/'>
-              <Navbar.Brand> Market Snipers Academy </Navbar.Brand>
+         <Navbar collapseOnSelect expand="lg" bg='black' variant="dark" className="py-4 border border-0 header" sticky='top' style={options}>
+      <Container>
+       <Navbar.Brand> <Link to='/'>Market Snipers Academy</Link> </Navbar.Brand> 
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="me-auto" variant='pills'>
+            <LinkContainer to='/courses'>
+              <Nav.Link href="#features">Courses</Nav.Link>
             </LinkContainer>
-            
-            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand`} />
-            <Navbar.Offcanvas
-              id={`offcanvasNavbar-expand`}
-              aria-labelledby={`offcanvasNavbarLabel-expand`}
-              placement="end"
-            >
-              <Offcanvas.Header closeButton>
-                <Offcanvas.Title id={`offcanvasNavbarLabel-expand`}>
-                  Market Snipers Academy
-                </Offcanvas.Title>
-              </Offcanvas.Header>
-              <Offcanvas.Body>
-                <Nav variant='pills' className="justify-content-start flex-grow-1 pe-3 rounded">
-                  {/* <LinkContainer to='/courses'> <Nav.Link>Courses</Nav.Link> </LinkContainer>  */}
-                  {/* <LinkContainer to='/Blog'> <Nav.Link>Blog</Nav.Link> </LinkContainer> */}
-                  <NavDropdown
-                    title="Dropdown"
-                    id={`offcanvasNavbarDropdown-expand`}
-                  >
-                    <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action4">
-                      Another action
-                    </NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action5">
-                      Something else here
-                    </NavDropdown.Item>
-                  </NavDropdown>
-                </Nav>
-                <Nav>
-            <Nav.Link href="#deets">Login</Nav.Link>
+
+            <LinkContainer to='/blog'>
+              <Nav.Link href="#features">Blog</Nav.Link>
+            </LinkContainer>
+
+            <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                Another action
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">
+                Separated link
+              </NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+          <Nav>
+            <Nav.Link href="#deets">Sign Up</Nav.Link>
             <Nav.Link eventKey={2} href="#memes">
-              Signup
+              Log In
             </Nav.Link>
           </Nav>
-              </Offcanvas.Body>
-            </Navbar.Offcanvas>
-          </Container>
-        </Navbar>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
     </header>
   )
 }

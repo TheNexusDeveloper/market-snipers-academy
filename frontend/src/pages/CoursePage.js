@@ -1,9 +1,9 @@
 import React, {useState, useEffect } from 'react' 
 
-import { Row, Col, } from 'react-bootstrap'
+import { Row, Col, Container, } from 'react-bootstrap'
 // import coursedb from '../coursedb'
 import CourseCard from '../components/CourseCard'
-import studyy from '../media/studyy.jpg'
+import studyyy from '../media/studyyy.jpg'
 
 import axios from 'axios'
 
@@ -20,13 +20,13 @@ function CoursePage() {
 
     fetchCourses()
     
-  },[])
+  },[]) 
   return (
     <div> 
         <div width='100%'>
-            <img src={studyy} alt='study' width='100%'/>
+            <img src={studyyy} alt='study' width='100%'/>
         </div>
-        
+        <Container>
          <Row>
           {coursedb.map(course => (
             <Col key={course._id} sm={12} md={6} lg={4} xl={3} >
@@ -34,6 +34,7 @@ function CoursePage() {
             </Col>
           ))}
         </Row>
+        </Container>
     </div>
   )
 }

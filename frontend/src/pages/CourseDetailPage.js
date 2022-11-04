@@ -1,33 +1,38 @@
 import React, {useState, useEffect}from 'react'
+import { useDispatch, useSelector  } from 'react-redux'
 // import coursedb from '../coursedb'
 import { useParams } from 'react-router' 
 import {Container, Row, Col, Button, Card  } from 'react-bootstrap'
 import face2 from '../media/face2.jpg'
-
-import axios from 'axios'
-
+import Loader from '../components/Loader'
+import Message from '../components/Message'
+import { listCourseDetails } from '../actions/courseActions'
 
 
 
 function CourseDetailPage() {
-  const [course, setCourse] = useState([])
+  const dispatch = useDispatch()
+  const courseDetails = useSelector(state => state.courseDetails)
+  const {loading, error, course } = courseDetails
+  
   const { id } = useParams()
 
   useEffect(() => {
-
-    async function fetchCourses(){
-
-      const { data } = await axios.get(`/api/courses/${encodeURIComponent(id)}`)
-      setCourse(data)
-    }
-
-    fetchCourses()
-    
-  },[id])
+    dispatch(listCourseDetails(encodeURIComponent(id)))
+   
+  }, [dispatch, id])
     
   return (
     <div> 
-      <Row style={{backgroundColor:'#212519', textDecorationColor:'white'}} className='py-3 text-center'>
+      {loading ? 
+        <Loader/>
+          : error 
+            ? <Message variant='danger'>{error}</Message> 
+          :(
+            <Container fluid>
+
+            
+            <Row style={{backgroundColor:'#cc9900', textDecorationColor:'white'}} className='py-3 text-center'>
           <Col className='py-5'>
             <h1>{course.name}</h1>
             <p>{course.about}</p>
@@ -53,8 +58,6 @@ function CourseDetailPage() {
            <div className='my-3'>
             <p>{course.about}</p>
             <p>{course.about}</p>
-            <p>{course.about}</p>
-            <p>{course.about}</p>
            </div>
             
           </Col>
@@ -65,7 +68,7 @@ function CourseDetailPage() {
               <Card.Body>
                 <Card.Title>${course.price}</Card.Title>
                 <Card.Text>
-                  <p>comes with a 20% discount when you purchase be december 12th</p>
+                  <p>comes with a 20% discount when you purchase before December 12th</p>
                 </Card.Text>
                 <Button variant="outline-warning">Get the course</Button>
               </Card.Body>
@@ -76,14 +79,20 @@ function CourseDetailPage() {
         <Row className='text-center'>
           <h3>Description</h3>
 
-          <p> {course.Description}</p>
-          <p> {course.Description}</p>
-          <p> {course.Description}</p>
+          <p> {course.description}</p>
           
         </Row>
         
       </Container>
+      </Container>
         
+
+            )
+
+    }
+
+
+      
     </div>
   )
 }

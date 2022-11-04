@@ -3,7 +3,9 @@ from django.http import JsonResponse
 from rest_framework.decorators import api_view
 from rest_framework.response import Response 
 
+from .models import Course 
 from .coursedb import coursedb 
+from .serializers import CourseSerializer
 
 # Create your views here.
 
@@ -26,13 +28,13 @@ def getRoutes(request):
 
 @api_view(['GET'])
 def getCourses(request):
-    return Response(coursedb) 
+    Courses = Course.objects.all()
+    serializer = CourseSerializer(Courses, many=True)
+    return Response(serializer.data) 
 
 @api_view(['GET'])
 def getCourse(request, pk):
-    course = None 
-    for i in coursedb:
-        if i['_id'] == pk:
-            course = i 
-            break 
-    return Response(course)
+    course = Course.objects.get(_id=pk)
+    serializer = CourseSerializer(course, many=False)
+   
+    return Response(serializer.data)
