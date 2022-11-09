@@ -1,14 +1,14 @@
 import React from 'react'
 
 import { Container, Row, Col } from 'react-bootstrap'
-
+import MSALOGO1 from '../designassetsmsa/MSALOGO1.png'
 
 function Footer() {
   return (
     <footer className='my-0' style={{backgroundColor:'#000000',}}>
       <Container fluid>
         <Row lg='1'> 
-          <Col> <h1> Master Snipers Academy </h1></Col> 
+          <Col className=''> <img src={MSALOGO1} alt='MSALOGO' width='200px' height='150px'/></Col> 
 
           <Row className='text-center'>
           <Col> 

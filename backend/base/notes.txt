@@ -1,0 +1,11 @@
+'/api/courses/',
+        '/api/courses/create/',
+        '/api/courses/upload/',
+
+        '/api/courses/<id>/reviews/',
+
+        '/api/courses/top/',
+        '/api/courses/<id>/',
+
+        '/api/courses/delete/<id>/',
+        '/api/courses/<update>/<id>/',

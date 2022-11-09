@@ -3,6 +3,7 @@ import { Container, Nav, Navbar, NavDropdown, } from 'react-bootstrap';
 
 import { LinkContainer } from 'react-router-bootstrap';
 import { Link } from 'react-router-dom';
+import MSALOGO11 from '../designassetsmsa/MSALOGO11.png'
 
 
 const options = {
@@ -16,7 +17,11 @@ function Header() {
     <header> 
          <Navbar collapseOnSelect expand="lg" bg='black' variant="dark" className="py-4 border border-0 header" sticky='top' style={options}>
       <Container>
-       <Navbar.Brand> <Link to='/'>Market Snipers Academy</Link> </Navbar.Brand> 
+       <Navbar.Brand> 
+          <Link to='/'> 
+            <img src={MSALOGO11} alt='MSALOGO' width='200px' height='100px'/>
+          </Link> 
+        </Navbar.Brand> 
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto" variant='pills'>
