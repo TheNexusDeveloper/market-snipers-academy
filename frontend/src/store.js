@@ -1,14 +1,60 @@
 import { createStore, combineReducers, applyMiddleware} from 'redux' 
 import thunk from 'redux-thunk' 
 import {composeWithDevTools} from 'redux-devtools-extension'
-import { courseListReducer, courseDetailsReducer } from './reducers/courseReducers'
+import { 
+    courseListReducer, 
+    courseDetailsReducer, 
+    courseDeleteReducer, 
+    courseCreateReducer, 
+    courseUpdateReducer,
+ 
+} from './reducers/courseReducers'
+
+import { 
+    userLoginReducer, 
+    userRegisterReducer, 
+    userDetailsReducer, 
+    userUpdateProfileReducer, 
+    userListReducer, 
+    userDeleteReducer, 
+    userUpdateReducer,
+ } from './reducers/userReducers'
+ 
+import { cartReducer } from './reducers/cartReducers'
+import { orderCreateReducer } from './reducers/orderReducers'
 
 const reducer = combineReducers({
     courseList: courseListReducer,
     courseDetails: courseDetailsReducer,
+    courseDelete: courseDeleteReducer,
+    courseCreate: courseCreateReducer,
+    courseUpdate: courseUpdateReducer,
+
+    cart: cartReducer,
+    userLogin: userLoginReducer,
+    userRegister: userRegisterReducer,
+    userDetails: userDetailsReducer,
+    userUpdateProfile: userUpdateProfileReducer,
+    userList: userListReducer,
+    userDelete: userDeleteReducer,
+    userUpdate : userUpdateReducer,
+
+    orderCreate: orderCreateReducer,
+
+    
 })
 
-const initialState = {}
+const cartItemsFromStorage = localStorage.getItem('cartItems') ? 
+    JSON.parse(localStorage.getItem('cartItems')) : []
+
+const userInfoFromStorage = localStorage.getItem('userInfo') ? 
+    JSON.parse(localStorage.getItem('userInfo')) : null 
+
+const initialState = {
+    cart : {cartItems: cartItemsFromStorage},
+    userLogin:{ userInfo: userInfoFromStorage },
+    userRegister : {userInfo: userInfoFromStorage }
+}
 
 const middleware = [thunk]
 

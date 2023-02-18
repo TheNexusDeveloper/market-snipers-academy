@@ -8,7 +8,7 @@ function Footer() {
     <footer className='my-0' style={{backgroundColor:'#000000',}}>
       <Container fluid>
         <Row lg='1'> 
-          <Col className=''> <img src={MSALOGO1} alt='MSALOGO' width='200px' height='150px'/></Col> 
+          <Col className=''> <img src={MSALOGO1} alt='MSALOGO' width='230px' height='230px'/></Col> 
 
           <Row className='text-center'>
           <Col> 

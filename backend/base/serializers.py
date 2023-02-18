@@ -2,7 +2,7 @@ from dataclasses import fields
 from rest_framework import serializers
 from rest_framework_simplejwt.tokens import RefreshToken
 from django.contrib.auth.models import User 
-from .models import Course 
+from .models import Course, Order, OrderItem
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -41,3 +41,26 @@ class CourseSerializer(serializers.ModelSerializer):
     class Meta:
         model = Course
         fields = '__all__'
+
+
+class OrderItemSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = OrderItem
+        fields = '__all__'
+
+class OrderSerializer(serializers.ModelSerializer):
+    orderItems = serializers.SerializerMethodField(read_only=True)
+    user = serializers.SerializerMethodField(read_only=True)
+    class Meta:
+        model = Order
+        fields = '__all__'
+    
+    def get_orderItems(self, obj):
+        items = obj.orderItem_set.all()
+        serializer = OrderItemSerializer(items, many=True)
+        return serializer.data
+
+    def get_users(self, obj):
+        user = obj.user 
+        serializer = UserSerializer(user, many=False)
+        return serilizer.data 

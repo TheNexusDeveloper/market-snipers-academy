@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 function CourseCard({course}) {
   return (
     <Card border='warning' style={{ width: '18rem' }} className='my-3 p-3 rounded '>
-      <Link to={`/courses/${course._id}`}>
+      <Link to={`/course/${course._id}`}>
     <Card.Img variant="top" src={course.image} height='200'/>
     <Card.Body>
       <Card.Title><h4> {course.name} </h4></Card.Title>

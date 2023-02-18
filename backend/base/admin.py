@@ -5,4 +5,4 @@ from .models import *
 admin.site.register(Course)
 admin.site.register(Review)
 admin.site.register(Order)
-admin.site.register(OrderItems)
+admin.site.register(OrderItem)
