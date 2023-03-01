@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fe998f3f.css",
+    "main.js": "/static/js/main.0d9dde76.js",
+    "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
+    "static/media/AwesomeGod.mp4": "/static/media/AwesomeGod.84749144f9d31775692c.mp4",
+    "static/media/MSALOGO1.png": "/static/media/MSALOGO1.889b97b186dcef239c1e.png",
+    "static/media/msawp2.jpg": "/static/media/msawp2.b37b28a1cec96a50999c.jpg",
+    "static/media/news.jpg": "/static/media/news.8beceafdde66d4cecf3b.jpg",
+    "static/media/forex.jpg": "/static/media/forex.5df46d1c39bd5e222e6c.jpg",
+    "static/media/MSALOGO11.png": "/static/media/MSALOGO11.19273bfcba8715520599.png",
+    "static/media/futures.png": "/static/media/futures.38f77f43dfbb4aed5efb.png",
+    "static/media/ment22.jpg": "/static/media/ment22.212b60c935e167b6824c.jpg",
+    "static/media/studyyy.jpg": "/static/media/studyyy.c00aa7944160125ccacf.jpg",
+    "static/media/mentcover.jpg": "/static/media/mentcover.451d82a04e5b9d266c3c.jpg",
+    "static/media/face2.jpg": "/static/media/face2.f8bb222f313fa67dd109.jpg",
+    "static/media/ment1.jpg": "/static/media/ment1.3a29f418af5e3e5ff5dd.jpg",
+    "static/media/invest.jpg": "/static/media/invest.69610c80391db94066c5.jpg",
+    "static/media/net.jpg": "/static/media/net.faaf0a148ae602d3dedc.jpg",
+    "static/media/ecommerce.png": "/static/media/ecommerce.049b78878aab32e0205a.png",
+    "index.html": "/index.html",
+    "main.fe998f3f.css.map": "/static/css/main.fe998f3f.css.map",
+    "main.0d9dde76.js.map": "/static/js/main.0d9dde76.js.map",
+    "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fe998f3f.css",
+    "static/js/main.0d9dde76.js"
+  ]
+}

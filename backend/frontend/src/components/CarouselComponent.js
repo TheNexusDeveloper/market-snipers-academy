@@ -1,54 +1,22 @@
 import React from 'react'
-import { Button, Carousel } from 'react-bootstrap'
-import news from '../media/news.jpg'
+import { Button, Card } from 'react-bootstrap'
 import msawp2 from '../media/msawp2.jpg'
-import showcase from '../media/showcase.jpg'
+
 
 function CarouselComponent() {
   return (
     <div>
-        <Carousel>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={showcase}
-          alt="First slide"
-        />
-        <Carousel.Caption>
-          <h2>First slide label</h2>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          <Button>Learn More</Button>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={news}
-          alt="Second slide"
-        />
-
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <Button>Learn More</Button>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={msawp2}
-          alt="Third slide"
-        />
-
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-          <Button variant='warning'>Learn More</Button>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
+       <Card className="bg-dark text-white">
+      <Card.Img src={msawp2} alt="Card image" />
+      <Card.ImgOverlay>
+        <Card.Title>Learn the latest industry leading skills on Market Snipers Academy </Card.Title>
+        <Card.Text>
+          This is a wider card with supporting text below as a natural lead-in
+          to additional content. This content is a little bit longer.
+        </Card.Text>
+        <Button variant='warning'>Explore</Button>
+      </Card.ImgOverlay>
+    </Card>
     </div>
   )
 }

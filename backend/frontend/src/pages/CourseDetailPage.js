@@ -123,7 +123,7 @@ function CourseDetailPage({match, history}) {
                  {/* <p>Taught by noteable professionals in the field</p> */}
                 </Col>
               
-                <Col className='text-center py-3' md={6}>
+                <Col className='text-center py-3' md={3}>
                 
                 <Card style={{backgroundColor: '#cc9900',}}>
 
@@ -136,7 +136,7 @@ function CourseDetailPage({match, history}) {
               
                 </Col>
 
-                <Col className='text-center py-3' md={6}>
+                <Col className='text-center py-3' md={3}>
                 <Card style={{backgroundColor: '#cc9900',}}>
 
                 <div className='text-center my-3'><img src={ face2 } alt='face' className='border rounded-circle' width='120'/></div>
@@ -148,7 +148,7 @@ function CourseDetailPage({match, history}) {
               
                 </Col>
 
-                <Col className='text-center py-3'md={6}>
+                <Col className='text-center py-3'md={3}>
                 <Card style={{backgroundColor: '#cc9900',}}>
 
                 <div className='text-center my-3'><img src={ face2 } alt='face' className='border rounded-circle' width='120'/></div>

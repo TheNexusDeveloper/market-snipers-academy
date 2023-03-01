@@ -41,15 +41,15 @@ function Header() {
               <Nav.Link>Courses</Nav.Link>
             </LinkContainer>
 
-            <LinkContainer to='/classes'>
+            {/* <LinkContainer to='/classes'>
               <Nav.Link>Classes</Nav.Link>
-            </LinkContainer>
+            </LinkContainer> */}
 
             <LinkContainer to='/mentorship'>
               <Nav.Link>Mentorship</Nav.Link>
             </LinkContainer>
 
-            <LinkContainer to='/acct management'>
+            <LinkContainer to='/acct-management'>
               <Nav.Link>Account Management</Nav.Link>
             </LinkContainer>
 

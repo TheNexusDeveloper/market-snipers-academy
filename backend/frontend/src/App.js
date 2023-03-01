@@ -18,6 +18,8 @@ import UserListPage from './pages/UserListPage'
 import UserEditPage from './pages/UserEditPage'
 import CourseListPage from './pages/CourseListPage'
 import CourseEditPage from './pages/CourseEditPage'
+import MentorshipPage from './pages/MentorshipPage';
+import AcctManagementPage from './pages/AcctManagementPage';
 
 
 
@@ -45,6 +47,9 @@ function App() {
 
             <Route path='/blog' component={BlogPage}></Route>
             <Route path='/blog/:id' component={BlogDetailPage}></Route>
+
+            <Route path='/mentorship' component={MentorshipPage}></Route>
+            <Route path='/acct-management' component={AcctManagementPage}></Route>
             
         
         </switch>
