@@ -25,7 +25,7 @@ function CartScreen({ match, location, history }) {
     }
 
     const checkoutHandler = () => {
-        history.push('/login?redirect=payment')
+        history.push('/payment') 
     }
 
     return (
@@ -46,7 +46,7 @@ function CartScreen({ match, location, history }) {
                                             <Image src={item.image} alt={item.name} fluid rounded />
                                         </Col>
                                         <Col md={3}>
-                                            <Link to={`/courses/${item.course}`}>{item.name}</Link>
+                                            <Link to={`/course/${item.course}`}>{item.name}</Link>
                                         </Col>
 
                                         <Col md={2}>
@@ -74,15 +74,15 @@ function CartScreen({ match, location, history }) {
                 <Card>
                     <ListGroup variant='flush'>
                         <ListGroup.Item>
-                            <h2>Subtotal</h2>
-                            ${cartItems.reduce((acc, item) => acc * item.price, 0).toFixed(2)}
+                            <h2>Subtotal ({cartItems.length}) Items</h2>
+                            ${cartItems.reduce((acc, item) => acc + Number(item.price), 0)}
                         </ListGroup.Item>
                     </ListGroup>
 
                     <ListGroup.Item className='text-center'>
                         <Button
                             type='button'
-                            className='btn-block'
+                            className='btn-block my-3'
                             disabled={cartItems.length === 0}
                             onClick={checkoutHandler}
                         >

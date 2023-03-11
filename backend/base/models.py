@@ -43,8 +43,8 @@ class Order(models.Model):
         return str (self.createdAt)
 
 class OrderItem(models.Model):
-    Course = models.ForeignKey(Course, on_delete=models.SET_NULL, null=True )
-    Order = models.ForeignKey(Order, on_delete=models.SET_NULL, null=True )
+    course = models.ForeignKey(Course, on_delete=models.SET_NULL, null=True )
+    order = models.ForeignKey(Order, on_delete=models.SET_NULL, null=True )
     name = models.CharField(max_length=200, null= True, blank= True)
     price = models.DecimalField(max_digits=7, decimal_places=2, null=True, blank=True )
     image = models.ImageField(null=True, blank=True)

@@ -9,15 +9,16 @@ import { ORDER_CREATE_RESET } from '../constants/orderConstants'
 
 
 
-function PlaceOrderPage({history}) { 
+function PlaceOrderPage({history}) {  
+    
   const orderCreate = useSelector(state => state.orderCreate)
   const {order, error, success} = orderCreate
 
-  const dispatch = useDispatch
+  const dispatch = useDispatch()
   const cart = useSelector(state => state.cart)
   
-  cart.itemsPrice = cart.price
-  cart.totalPrice = (Number(cart.price)).toFixed(2) 
+  cart.itemsPrice = cart.cartItems.reduce((acc, item) => acc + Number(item.price), 0)
+  cart.totalPrice = (Number(cart.itemsPrice)).toFixed(2) 
 
 
   if(!cart.paymentMethod){
@@ -39,7 +40,7 @@ function PlaceOrderPage({history}) {
 			totalPrice: cart.totalPrice,
 		}))
 
-  }
+    }
 
 
   return (
@@ -70,7 +71,7 @@ function PlaceOrderPage({history}) {
 										</Col>
 
 										<Col>
-										  <Link to={`/courses/${item.course}`}>{item.name}</Link>
+										  <Link to={`/course/${item.course}`}>{item.name}</Link>
 										  </Col>
 
 										<Col md={4}>
@@ -117,7 +118,7 @@ function PlaceOrderPage({history}) {
 							<ListGroup.Item>
 								<Button
 									type='button'
-									className='btn-block'
+									className='btn-block my-3'
 									disabled={cart.cartItems === 0}
 									onClick={placeOrder}
 								>

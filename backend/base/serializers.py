@@ -56,11 +56,11 @@ class OrderSerializer(serializers.ModelSerializer):
         fields = '__all__'
     
     def get_orderItems(self, obj):
-        items = obj.orderItem_set.all()
+        items = obj.orderitem_set.all()
         serializer = OrderItemSerializer(items, many=True)
         return serializer.data
 
-    def get_users(self, obj):
+    def get_user(self, obj):
         user = obj.user 
         serializer = UserSerializer(user, many=False)
-        return serilizer.data 
+        return serializer.data 

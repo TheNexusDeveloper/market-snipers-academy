@@ -15,7 +15,7 @@ function AboutComponent() {
 
           <Row xs={1} md={1} lg={2} xl={2}>
           <Col width='50%'>
-            <video src={AwesomeGod} width="100%" height="240" controls typeof='video/mp4'/>
+            <video src={AwesomeGod} width="100%" height="240" className='rounded-3' controls typeof='video/mp4'/>
           </Col>
           <Col>
             <p>

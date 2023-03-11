@@ -21,7 +21,7 @@ import {
  } from './reducers/userReducers'
  
 import { cartReducer } from './reducers/cartReducers'
-import { orderCreateReducer } from './reducers/orderReducers'
+import { orderCreateReducer, orderDetailsReducer, orderPayReducer, orderListMyReducer } from './reducers/orderReducers'
 
 const reducer = combineReducers({
     courseList: courseListReducer,
@@ -40,6 +40,9 @@ const reducer = combineReducers({
     userUpdate : userUpdateReducer,
 
     orderCreate: orderCreateReducer,
+    orderDetails: orderDetailsReducer,
+    orderPay: orderPayReducer, 
+    orderListMy: orderListMyReducer,
 
     
 })

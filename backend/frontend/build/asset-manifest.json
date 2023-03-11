@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.fe998f3f.css",
-    "main.js": "/static/js/main.0d9dde76.js",
+    "main.js": "/static/js/main.580b1069.js",
     "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
     "static/media/AwesomeGod.mp4": "/static/media/AwesomeGod.84749144f9d31775692c.mp4",
     "static/media/MSALOGO1.png": "/static/media/MSALOGO1.889b97b186dcef239c1e.png",
@@ -20,11 +20,11 @@
     "static/media/ecommerce.png": "/static/media/ecommerce.049b78878aab32e0205a.png",
     "index.html": "/index.html",
     "main.fe998f3f.css.map": "/static/css/main.fe998f3f.css.map",
-    "main.0d9dde76.js.map": "/static/js/main.0d9dde76.js.map",
+    "main.580b1069.js.map": "/static/js/main.580b1069.js.map",
     "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fe998f3f.css",
-    "static/js/main.0d9dde76.js"
+    "static/js/main.580b1069.js"
   ]
 }
