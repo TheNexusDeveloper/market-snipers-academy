@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import {Row, Col, ListGroup, Image, Container, Card } from 'react-bootstrap'
+import {Row, Col, ListGroup, Image, Container, Card, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { PayPalButton } from 'react-paypal-button-v2'
@@ -55,6 +55,9 @@ function OrderPage({ match }) {
     }
  
 
+    const handleReload = () =>{
+        window.location.reload()
+    }
 
   return loading ? (
     <Loader/>
@@ -76,9 +79,24 @@ function OrderPage({ match }) {
                         {order.isPaid ? (
                             <Message variant='success'>Paid on: {order.paidAt}</Message> 
                         ) : (
-                            <Message variant='warning'>Not Paid</Message>
+                            
+
+                            <div> 
+                                <Message variant='warning'>Not Paid</Message>
+                            <em>if paid status doesn't change after making payment click  
+                                <Button 
+                                    variant='warning'
+                                    className='btn-sm mx-1'
+                                    onClick={handleReload}
+                                >
+                                    here
+                                </Button>
+                            
+                            </em>
+                        </div>
                         )}
-                    </ListGroup.Item>
+                    </ListGroup.Item> 
+
                         
                     <ListGroup.Item>
                         <h2>Order Items</h2>
