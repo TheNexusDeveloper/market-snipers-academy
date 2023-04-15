@@ -1,31 +1,14 @@
 import React from 'react'
 
-import { Card, Button, Row, Col, Container } from 'react-bootstrap'
+import { Button, Row, Col, Container } from 'react-bootstrap'
 
 import ment22 from '../media/ment22.jpg'
-import mentcover from '../media/mentcover.jpg'
 import bitcoin from '../media/bitcoin.png'
 import amazon from '../media/amazon.png'
-import futures from '../media/futures.png'
 import ecommerce from '../media/ecommerce.png'
-import net from '../media/net.jpg'
-import forex from '../media/forex.jpg'
 
 function MentorshipPage() {
   return (
-    <div>
-         {/* <Card className="bg-dark text-white">
-      <Card.Img src={mentcover} alt="Card image" />
-      <Card.ImgOverlay>
-        <Card.Title>Learn the latest industry leading skills on Market Snipers Academy </Card.Title>
-        <Card.Text>
-          This is a wider card with supporting text below as a natural lead-in
-          to additional content. This content is a little bit longer.
-        </Card.Text>
-        <Button variant='warning'>Explore</Button>
-      </Card.ImgOverlay>
-    </Card> */}
-
     <Container>
     <Row className='my-3 text-center'>
         <Col sm={12} lg={6} className='p-3' >
@@ -87,9 +70,18 @@ function MentorshipPage() {
         
         
     </Row>
+
+    <Row className='my-5'>
+        <Col className='text-center' >
+            <h3>Tutors</h3>
+        </Col>
+
+        <Col>
+            
+        </Col>
+    </Row>
     </Container>
     
-    </div>
   )
 }
 

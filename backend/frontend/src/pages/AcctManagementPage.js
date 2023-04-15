@@ -72,7 +72,7 @@ function AcctManagementPage() {
                             Get profitable returns on your deals 
                             made at the foreign exchange market 
                         </p>
-                        <Button variant='outline-warning'>Sign Up</Button>
+                        <a href='https://market-snipers.com/' style={{textDecoration: 'inherit'}}><Button variant='outline-warning'>Sign Up</Button></a>
                     </div>
                 </Col>
 
@@ -84,7 +84,7 @@ function AcctManagementPage() {
                             Get profitable returns on your deals 
                             made at the foreign exchange market 
                         </p>
-                        <Button variant='outline-warning'>Sign Up</Button>
+                        <a href='https://market-snipers.com/' style={{textDecoration: 'inherit'}}><Button variant='outline-warning'>Sign Up</Button></a>
                     </div>
                 </Col>
 
@@ -96,7 +96,7 @@ function AcctManagementPage() {
                             Get profitable returns on your deals 
                             made at the foreign exchange market 
                         </p>
-                        <Button variant='outline-warning'>Sign Up</Button>
+                        <a href='https://market-snipers.com/' style={{textDecoration: 'inherit'}}><Button variant='outline-warning'>Sign Up</Button></a>
                     </div>
                 </Col>
 

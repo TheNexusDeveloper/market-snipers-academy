@@ -7,7 +7,8 @@ from django.contrib.auth.models import User
 class Course(models.Model):
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True )
     name = models.CharField(max_length=200, null=True, blank=False )
-    image = models.ImageField(null=True, blank=True, default='/placeholder.png')
+    image = models.ImageField(upload_to='images/', null=True, blank=True, default='/placeholder.png')
+    upload = models.FileField(upload_to ='uploads/', null=True, blank=True )
     price = models.DecimalField(max_digits=7, decimal_places=2, null=True, blank=True )
     about = models.CharField(max_length=500, null=True, blank=True )
     description = models.TextField(null=True, blank=True)
@@ -47,6 +48,8 @@ class OrderItem(models.Model):
     order = models.ForeignKey(Order, on_delete=models.SET_NULL, null=True )
     name = models.CharField(max_length=200, null= True, blank= True)
     price = models.DecimalField(max_digits=7, decimal_places=2, null=True, blank=True )
+    isPaid = models.BooleanField(default=False)
+    paidAt = models.DateTimeField(auto_now_add = False, null = True, blank = True )
     image = models.ImageField(null=True, blank=True)
     _id = models.AutoField(primary_key=True, editable=False) 
 

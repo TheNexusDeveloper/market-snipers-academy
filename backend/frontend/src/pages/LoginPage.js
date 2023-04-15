@@ -35,6 +35,10 @@ function Loginpage({location, history}) {
         setPassword('')
     }
 
+    const handleReload = () =>{
+        window.location.reload()
+    }
+
   return (
     <FormContainer>
         <h1>Sign In</h1>
@@ -45,6 +49,7 @@ function Loginpage({location, history}) {
             <Form.Group controlId='email'>
                 <Form.Label>Email Address</Form.Label>
                 <Form.Control
+                    required
                     type='email'
                     placeholder='Enter Email'
                     value={email}
@@ -57,6 +62,7 @@ function Loginpage({location, history}) {
             <Form.Group controlId='password'>
                 <Form.Label>Password</Form.Label>
                 <Form.Control
+                    required
                     type='password'
                     placeholder='Enter Password'
                     value={password}
@@ -86,6 +92,20 @@ function Loginpage({location, history}) {
                 </Link>
             </Col>
         </Row> 
+
+        <Row>
+            <Col>
+                <em>if you're not redirected after login click here 
+                    <Button 
+                        variant='warning'
+                        className='btn-sm mx-1'
+                        onClick={handleReload}
+                    >
+                        here
+                    </Button>
+                </em>
+            </Col>
+        </Row>
     </FormContainer>
   )
 }

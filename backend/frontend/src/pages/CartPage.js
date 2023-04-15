@@ -13,6 +13,9 @@ function CartScreen({ match, location, history }) {
     const cart = useSelector(state => state.cart)
     const { cartItems } = cart
 
+    const userLogin = useSelector(state => state.userLogin)
+    const {userInfo} = userLogin
+
     useEffect(() => {
         if (courseId) {
             dispatch(addToCart(courseId))
@@ -25,7 +28,12 @@ function CartScreen({ match, location, history }) {
     }
 
     const checkoutHandler = () => {
-        history.push('/payment') 
+        if (userInfo){
+            history.push(`/payment`)
+        } else {
+            history.push(`/login`)
+        }
+        
     }
 
     return (

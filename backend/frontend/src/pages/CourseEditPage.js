@@ -19,6 +19,7 @@ function CourseEditPage({ match, history }) {
     const [name, setName] =  useState('')
     const [price, setPrice] =  useState(0)
     const [image, setImage] =  useState('')
+    const [upload, setUpload] = useState('')
     const [about, setAbout] =  useState('')
     const [description, setDescription] =  useState('')
     const [tutors, setTutor] = useState('')
@@ -46,6 +47,7 @@ function CourseEditPage({ match, history }) {
                 setName(course.name)
                 setPrice(course.price)
                 setImage(course.image)
+                setUpload(course.upload)
                 setAbout(course.about)
                 setDescription(course.description)
                 
@@ -66,6 +68,7 @@ function CourseEditPage({ match, history }) {
             name, 
             price,
             image,
+            upload,
             about,
             description,
             tutors,
@@ -161,6 +164,32 @@ function CourseEditPage({ match, history }) {
                         {uploading && <Loader/>}
                         
                     </Form.Group>
+
+
+                    <Form.Group controlId='upload'>
+                        <Form.Label>File</Form.Label>
+                        <Form.Control
+                            
+                            type='text'
+                            placeholder='Upload File'
+                            value={upload}
+                            onChange={(e) => setUpload(e.target.value)}
+                        >
+                        </Form.Control>
+
+                        <Form.Control
+                            type='file'
+                            id='pdf-file'
+                            Label= 'choose flle'
+                            custom 
+                            onChange={uploadFileHandler}
+                        >
+                            
+                        </Form.Control>
+                        {uploading && <Loader/>}
+                        
+                    </Form.Group>
+
 
 
                     <Form.Group controlId='about'>

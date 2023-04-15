@@ -2,7 +2,7 @@ import React, {useState, useEffect } from 'react'
 import { Card, Button,  Stack, Row, Col, Container } from 'react-bootstrap' 
 import { useDispatch, useSelector } from 'react-redux'
 import news from '../media/news.jpg'
-import trustwallet from '../media/trustwallet.png'
+import trustwallet1 from '../media/trustwallet1.png'
 import CourseCard from '../components/CourseCard'
 import CarouselComponent from '../components/CarouselComponent'
 import AboutComponent from '../components/AboutComponent'
@@ -40,7 +40,7 @@ function HomePage() {
 
                     {/* Courses Section */}
 
-        <Container> 
+        {/* <Container> 
         	{loading ? <Loader />
         		: error ? <Message variant='danger'>{error}</Message>
             		:
@@ -57,7 +57,7 @@ function HomePage() {
 						</Container>
 					</Row>
         	}
-        </Container>
+        </Container> */}
 
                         {/** Blog Section */}
 
@@ -166,12 +166,16 @@ function HomePage() {
         <Container fluid> 
           <h2 className='text-center'>Our Patners</h2>
           <Row>
-            <Col width='50%'>
-              <img src={trustwallet} alt='trustwallet' width='100%'/>
+            <Col sm='4' lg='4'>
+              <img src={trustwallet1} alt='trustwallet' width='100%'/>
             </Col>
 
-            <Col width='50%'>
-              <img src={trustwallet} alt='trustwallet' width='100%'/>
+            <Col sm='4' lg='4'>
+              <img src={trustwallet1} alt='trustwallet' width='100%'/>
+            </Col>
+
+            <Col sm='4' lg='4'>
+              <img src={trustwallet1} alt='trustwallet' width='100%'/>
             </Col>
           </Row>
         </Container>

@@ -15,6 +15,14 @@ import {
     ORDER_LIST_MY_REQUEST,
     ORDER_LIST_MY_SUCCESS,
     ORDER_LIST_MY_FAIL,
+
+    ORDERITEM_LIST_REQUEST,
+    ORDERITEM_LIST_SUCCESS,
+    ORDERITEM_LIST_FAIL,
+
+    ORDERITEM_PAY_REQUEST,
+    ORDERITEM_PAY_SUCCESS,
+    ORDERITEM_PAY_FAIL,
     
     
  } from '../constants/orderConstants' 
@@ -151,6 +159,47 @@ export const payOrder = (id, paymentResult) => async (dispatch, getState) => {
 }
 
 
+export const payOrderItem = (id, paymentResult) => async (dispatch, getState) => {
+    try{
+        dispatch({
+            type:ORDERITEM_PAY_REQUEST
+        }) 
+
+        const {
+            userLogin: {userInfo},
+        } = getState()
+
+        const config = {
+            headers: {
+                'content-type': 'application/json',
+                Authorization: `Bearer ${userInfo.token}`
+            }
+        }
+
+        const {data} = await axios.put(
+            `/api/orders/orderitem/${id}/itempay/`,
+            paymentResult,
+            config
+        )
+
+            dispatch({
+                type: ORDERITEM_PAY_SUCCESS,
+                payload:data 
+            })
+
+
+    } catch (error) {
+        dispatch({
+            type: ORDERITEM_PAY_FAIL,
+            payload: error.response && error.response.data.detail
+            ? error.response.data.detail
+            : error.message,
+        })
+
+    }
+}
+
+
 export const listMyOrders = () => async (dispatch, getState) => {
     try{
         dispatch({
@@ -187,5 +236,42 @@ export const listMyOrders = () => async (dispatch, getState) => {
             : error.message,
         })
 
+    }
+}
+
+export const listMyOrderItems = () => async (dispatch, getState) => {
+    try{
+        dispatch({
+            type: ORDERITEM_LIST_REQUEST
+        })
+
+        const {
+            userLogin: {userInfo},
+        } = getState()
+
+        const config = {
+            headers: {
+                'content-type': 'application/json',
+                Authorization: `Bearer ${userInfo.token}`
+            }
+        }
+
+        const { data } = await axios.get(
+            `/api/orders/orderitems/`,
+            config
+        )
+
+        dispatch({
+            type: ORDERITEM_LIST_SUCCESS,
+            payload: data
+        })
+
+    } catch (error){
+        dispatch({
+            type: ORDERITEM_LIST_FAIL,
+            payload: error.response && error.response.data.detail
+            ? error.response.data.detail
+            : error.message,
+        })
     }
 }

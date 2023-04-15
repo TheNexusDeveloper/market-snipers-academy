@@ -5,7 +5,7 @@ from rest_framework.response import Response
 
 
 from base.models import Course, Order, OrderItem
-from base.serializers import CourseSerializer, OrderSerializer
+from base.serializers import CourseSerializer, OrderSerializer, OrderItemSerializer
 
 from rest_framework import status 
 from datetime import datetime
@@ -81,6 +81,8 @@ def getOrderById(request, pk):
 @permission_classes([IsAuthenticated])
 def updateOrderToPaid(request, pk):
     order = Order.objects.get(_id=pk)
+    
+
 
     order.isPaid = True 
     order.paidAt = datetime.now()
@@ -88,3 +90,33 @@ def updateOrderToPaid(request, pk):
 
     return Response('Order was paid')
 
+
+@api_view(['PUT'])
+@permission_classes([IsAuthenticated])
+def updateOrderItemToPaid(request, pk):
+    item = OrderItem.objects.get(_id=pk)
+
+    
+    item.isPaid = True 
+    item.paidAt = datetime.now()
+    item.save() 
+
+    return Response ('Item was paid for')
+
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def getAllOrderItems(request):
+    orderItems = OrderItem.objects.all()
+    serializer = OrderItemSerializer(orderItems, many=True)
+
+    return Response(serializer.data)
+
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def getOrderItem(request, pk):
+    orderItem = OrderItem.objects.get(_id=pk)
+    serializer = OrderItemSerializer(orderItem, many=False)
+
+    return Response(serializer.data)

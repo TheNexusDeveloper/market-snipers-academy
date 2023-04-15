@@ -43,6 +43,10 @@ function RegisterPage() {
         }
         
     }
+
+    const handleReload = () =>{
+        window.location.reload()
+    }
     
   return (
     <FormContainer>
@@ -120,6 +124,20 @@ function RegisterPage() {
                         >
                     Login
                 </Link>
+            </Col>
+        </Row>
+
+        <Row>
+            <Col>
+                <em>if you're not redirected after login click here 
+                    <Button 
+                        variant='warning'
+                        className='btn-sm mx-1'
+                        onClick={handleReload}
+                    >
+                        here
+                    </Button>
+                </em>
             </Col>
         </Row>
     </FormContainer>
