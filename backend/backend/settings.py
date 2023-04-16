@@ -30,8 +30,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-!+q=%7(ffn5f+-
 
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = ['market-snipers-academy-production.up.railway.app/']
-
+ALLOWED_HOSTS = ['https://market-snipers-academy-production.up.railway.app/']
 
 # Application definition
 
