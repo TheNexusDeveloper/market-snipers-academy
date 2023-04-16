@@ -73,6 +73,7 @@ def deleteCourse(request, pk):
     return Response('Course Deleted') 
 
 @api_view(['POST'])
+@permission_classes([IsAdminUser])
 def uploadImage(request): 
     data = request.data 
 
@@ -83,3 +84,17 @@ def uploadImage(request):
     course.save()
 
     return Response('Image was uploaded')
+
+
+@api_view(['POST'])
+@permission_classes([IsAdminUser])
+def uploadDocument(request): 
+    data = request.data 
+
+    course_id = data['course_id'] 
+    course = Course.objects.get(_id=course_id)
+
+    course.document = request.FILES.get('document')
+    course.save()
+
+    return Response('Document was uploaded')

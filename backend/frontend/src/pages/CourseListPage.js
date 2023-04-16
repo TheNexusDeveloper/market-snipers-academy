@@ -61,8 +61,8 @@ function CourseListPage({history, match}) {
                 <h1>Courses</h1>
             </Col>
 
-            <Col className='text-right'>
-                <Button className='my-3' onClick={createCourseHandler}>
+            <Col className='text-right align-items-right'>
+                <Button className='my-3 mx-5' onClick={createCourseHandler}>
                     <i className='fas fa-plus'></i> Add Course
                 </Button>
             </Col>

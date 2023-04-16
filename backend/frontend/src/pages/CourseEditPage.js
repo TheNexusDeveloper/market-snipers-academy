@@ -19,7 +19,7 @@ function CourseEditPage({ match, history }) {
     const [name, setName] =  useState('')
     const [price, setPrice] =  useState(0)
     const [image, setImage] =  useState('')
-    const [upload, setUpload] = useState('')
+    const [document, setDocument] = useState('')
     const [about, setAbout] =  useState('')
     const [description, setDescription] =  useState('')
     const [tutors, setTutor] = useState('')
@@ -27,6 +27,8 @@ function CourseEditPage({ match, history }) {
 
     const dispatch = useDispatch() 
 
+    const userLogin = useSelector(state => state.userLogin)
+    const {userInfo} = userLogin 
 
     const courseDetails = useSelector(state => state.courseDetails)
     const {error, loading, course} = courseDetails
@@ -47,7 +49,7 @@ function CourseEditPage({ match, history }) {
                 setName(course.name)
                 setPrice(course.price)
                 setImage(course.image)
-                setUpload(course.upload)
+                setDocument(course.document)
                 setAbout(course.about)
                 setDescription(course.description)
                 
@@ -68,7 +70,7 @@ function CourseEditPage({ match, history }) {
             name, 
             price,
             image,
-            upload,
+            document,
             about,
             description,
             tutors,
@@ -77,7 +79,7 @@ function CourseEditPage({ match, history }) {
         
     }
 
-    const uploadFileHandler = async (e) => {
+    const uploadImageHandler = async (e) => {
         const file = e.target.files[0]
         const formData = new FormData() 
 
@@ -89,15 +91,44 @@ function CourseEditPage({ match, history }) {
         try{
             const config = {
                 headers:{
-                    'Content-Type': 'multipart/form-data' 
+                    'Content-Type': 'multipart/form-data',
+                    Authorization: `Bearer ${userInfo.token}`
                 }
             } 
+
 
             const {data} = await axios.post('/api/courses/upload/', formData, config )
 
             setImage(data)
             setUploading(false)
+
         }catch(error){
+            setUploading(false)
+        }
+    }
+
+    const uploadDocHandler = async (e) => {
+        const file = e.target.files[0] 
+        const formData = new FormData()
+
+        formData.append('document', file )
+        formData.append('course_id', courseId )
+
+        setUploading(true)
+
+        try{
+            const config = {
+                headers:{
+                    'Content-Type': 'multipart/for-data',
+                    Authorization: `Bearer ${userInfo.token}`,
+                }
+            }
+
+            const {data} = await axios.post('api/courses/uploadDocument/', formData, config)
+            
+            setDocument(data)
+            setUploading(false)
+        } catch(error){
             setUploading(false)
         }
     }
@@ -154,10 +185,10 @@ function CourseEditPage({ match, history }) {
 
                         <Form.Control
                             type='file'
-                            id='image-file'
-                            Label= 'choose flle'
+                            id='image'
+                            label= 'choose flle'
                             custom 
-                            onChange={uploadFileHandler}
+                            onChange={uploadImageHandler}
                         >
                             
                         </Form.Control>
@@ -166,23 +197,23 @@ function CourseEditPage({ match, history }) {
                     </Form.Group>
 
 
-                    <Form.Group controlId='upload'>
-                        <Form.Label>File</Form.Label>
+                    <Form.Group controlId='document'>
+                        <Form.Label>Document</Form.Label>
                         <Form.Control
                             
                             type='text'
-                            placeholder='Upload File'
-                            value={upload}
-                            onChange={(e) => setUpload(e.target.value)}
+                            placeholder='Upload Document'
+                            value={document}
+                            onChange={(e) => setDocument(e.target.value)}
                         >
                         </Form.Control>
 
                         <Form.Control
                             type='file'
-                            id='pdf-file'
-                            Label= 'choose flle'
-                            custom 
-                            onChange={uploadFileHandler}
+                            id='document'
+                            label= 'choose document'
+                            custom
+                            onChange={uploadDocHandler}
                         >
                             
                         </Form.Control>

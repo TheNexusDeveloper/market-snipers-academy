@@ -10,6 +10,7 @@ urlpatterns = [
 
     path('create/', views.createCourse, name='course-create' ),
     path('upload/', views.uploadImage, name='image-upload' ),
+    path('uploadDocument/', views.uploadDocument, name='document-upload' ),
     path('<str:pk>/', views.getCourse, name="course"),
 
     

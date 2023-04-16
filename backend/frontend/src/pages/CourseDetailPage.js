@@ -43,8 +43,6 @@ function CourseDetailPage({match, history}) {
     
     const paidItems = findpaidItems(orderItemList)
 
-    console.log(paidItems)
-
 
     return (
         <div> 
@@ -109,7 +107,7 @@ function CourseDetailPage({match, history}) {
                                 {paidItems ? (
                                         <Col>
                                             <Button variant='outline-warning'>
-                                               <a href={course.upload} style={{textDecoration: 'inherit', color: 'inherit'}}>Download Pdf</a>
+                                               <a href={course.document} style={{textDecoration: 'inherit', color: 'inherit'}}>Download Pdf</a>
                                             </Button>
                                         </Col>
                                 ) : ( <div></div>)
