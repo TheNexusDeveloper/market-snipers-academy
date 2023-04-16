@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-!+q=%7(ffn5f+-1ydkg(&_=pdzqrwemkwtyw#5dhalc-*-1)(a
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['market-snipers-academy-production.up.railway.app/']
 
 
 # Application definition
