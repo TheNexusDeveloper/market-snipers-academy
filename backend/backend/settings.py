@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-!+q=%7(ffn5f+-
 
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = ['market-snipers-academy-production.up.railway.app/']
+ALLOWED_HOSTS = ['market-snipers-academy-production.up.railway.app/#/']
 
 
 # Application definition
@@ -202,7 +202,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ## For example, for a site URL is at 'web-production-3640.up.railway.app'
 ## (replace the string below with your own site URL):
-CSRF_TRUSTED_ORIGINS = ['https://market-snipers-academy-production.up.railway.app/']
+CSRF_TRUSTED_ORIGINS = ['https://market-snipers-academy-production.up.railway.app/#/']
 
 # During development/for this tutorial you can instead set just the base URL
 # CSRF_TRUSTED_ORIGINS = ['https://*.railway.app']
