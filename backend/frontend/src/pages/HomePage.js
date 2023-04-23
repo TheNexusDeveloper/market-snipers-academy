@@ -123,7 +123,7 @@ function HomePage() {
           <Card>
             <Card.Img variant="top" src={news} alt='pic'/>
             <Card.Body>
-              <Card.Title>Elon Musk plans to start selling plots of Land on the moon</Card.Title>
+              <Card.Title>Elon Musk unveils plans of start selling plots of Land on the moon</Card.Title>
               <Card.Text>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
               </Card.Text>
@@ -138,10 +138,8 @@ function HomePage() {
           <Card>
             <Card.Img variant="top" src={news} alt='pic'/>
             <Card.Body>
-              <Card.Title>Elon Musk plans to start selling plots of Land on the moon</Card.Title>
-              <Card.Text>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-              </Card.Text>
+              <Card.Title>Elon Musk unveils plans of selling plots of Land on the moon</Card.Title>
+              
               <Button variant='outline-warning'>Read More</Button>
             </Card.Body>
           </Card>
@@ -151,10 +149,8 @@ function HomePage() {
           <Card>
             <Card.Img variant="top" src={news} alt='pic'/>
             <Card.Body>
-              <Card.Title>Elon Musk plans to start selling plots of Land on the moon</Card.Title>
-              <Card.Text>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-              </Card.Text>
+              <Card.Title>Elon Musk unveils plans of selling plots of Land on the moon</Card.Title>
+             
               <Button variant='outline-warning'>Read More</Button>
             </Card.Body>
           </Card>
@@ -164,10 +160,8 @@ function HomePage() {
           <Card>
             <Card.Img variant="top" src={news} alt='pic'/>
             <Card.Body>
-              <Card.Title>Elon Musk plans to start selling plots of Land on the moon</Card.Title>
-              <Card.Text>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-              </Card.Text>
+              <Card.Title>Elon Musk unveils plans of start selling plots of Land on the moon</Card.Title>
+            
               <Button variant='outline-warning'>Read More</Button>
             </Card.Body>
           </Card>
