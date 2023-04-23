@@ -1,4 +1,5 @@
 // import { Container } from 'react-bootstrap';
+import React, { useEffect } from 'react'
 import { HashRouter as Router, Route} from 'react-router-dom'
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -21,12 +22,18 @@ import CourseListPage from './pages/CourseListPage'
 import CourseEditPage from './pages/CourseEditPage'
 import MentorshipPage from './pages/MentorshipPage';
 import AcctManagementPage from './pages/AcctManagementPage';
-
+import icon from './media/favicon.ico'
 
 
 
 function App() {
+
+    useEffect(() => {
+        const favicon = document.getElementById('favicon');
+        favicon.setAttribute('href', icon);
+    }, []);
   return (
+
     <Router>
       <Header /> 
       <main className='py-0'> 

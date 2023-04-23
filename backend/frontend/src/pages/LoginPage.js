@@ -20,20 +20,35 @@ function Loginpage({location, history}) {
     const userLogin = useSelector(state => state.userLogin)
     const {error, loading, userInfo} = userLogin 
 
-    useEffect(() => {
-        if (userInfo) {
-            
-            history.push('/')
-        }
-    },  [history, userInfo])
+
 
     const submitHandler = (e) =>{
         e.preventDefault()
         dispatch(login(email, password))
-        // window.location.reload()
+        // if (userInfo){
+            // setTimeout(function(){
+            //     window.location.reload()
+            // }, 2000)
+        // }
+        // setTimeout(function(){
+        //     if (userInfo){
+        //         window.location.reload();
+        //     }
+            
+        //  }, 1000);
         setEmail('')
         setPassword('')
     }
+
+    useEffect(() => {
+        if (userInfo) {
+            
+            history.push('/')
+            window.location.reload()
+        }
+    },  [history, userInfo])
+
+    
 
     const handleReload = () =>{
         window.location.reload()
