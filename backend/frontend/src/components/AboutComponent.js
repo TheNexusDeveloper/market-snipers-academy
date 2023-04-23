@@ -47,19 +47,19 @@ function AboutComponent() {
             </Col>
 
             <Col sm={12} md={6} lg={4}>
-              <div className='text-center my-3'><img src={ face4 } alt='face' className='border rounded-circle ' width='150'/></div>
+              <div className='text-center my-3'><img src={ face3 } alt='face' className='border rounded-circle ' width='150'/></div>
               <div>
-                <p className='text-center'><strong>Harry Flint </strong></p>
-                <p className='text-center'><em>Senior software Engineer</em></p>
+                <p className='text-center'><strong>Sara Daniels</strong></p>
+                <p className='text-center'><em>Data Analyst</em></p>
                 <p className='text-center'> There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
               </div>
             </Col>
 
             <Col sm={12} md={6} lg={4}>
-              <div className='text-center my-3'><img src={ face3 } alt='face' className='border rounded-circle' width='150'/></div>
+              <div className='text-center my-3'><img src={ face4 } alt='face' className='border rounded-circle' width='150'/></div>
               <div>
-                <p className='text-center'><strong>Sara Daniels</strong></p>
-                <p className='text-center'><em>Data Analyst</em></p>
+                <p className='text-center'><strong>Harry Flint</strong></p>
+                <p className='text-center'><em>Senior software Engineer</em></p>
                 <p className='text-center'> There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
               </div>
             </Col>
