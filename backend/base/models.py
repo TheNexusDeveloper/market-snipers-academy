@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 class Course(models.Model):
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True )
     name = models.CharField(max_length=200, null=True, blank=False )
-    image = models.ImageField(upload_to='images/', null=True, blank=True, default='/placeholder.png')
+    image = models.ImageField(upload_to='images/', null=True, blank=True, default='/images/placeholder.png')
     document = models.FileField(upload_to ='uploads/', null=True, blank=True )
     price = models.DecimalField(max_digits=7, decimal_places=2, null=True, blank=True )
     about = models.CharField(max_length=500, null=True, blank=True )
