@@ -2,6 +2,8 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import AwesomeGod from '../media/AwesomeGod.mp4'
 import face2 from '../media/face2.jpg'
+import face3 from '../media/face3.jpg'
+import face4 from '../media/face4.jpg'
 
 function AboutComponent() {
   return (
@@ -30,31 +32,34 @@ function AboutComponent() {
          <Container>
         <Row className='my-5'>
 
-            <Col className='' >
+            <Col className='text-center' lg={12} >
                 <h2>Meet Our Team</h2>
             </Col>
           
           
-            <Col>
+            <Col sm={12} md={6} lg={4}>
               <div className='text-center my-3'><img src={ face2 } alt='face' className='border rounded-circle' width='150'/></div>
               <div>
+                <p className='text-center'><strong>John Doe Chukwudi</strong></p>
+                <p className='text-center'><em>CEO, Head of Operations</em></p>
+                <p className='text-center'> There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+              </div>
+            </Col>
+
+            <Col sm={12} md={6} lg={4}>
+              <div className='text-center my-3'><img src={ face4 } alt='face' className='border rounded-circle ' width='150'/></div>
+              <div>
+                <p className='text-center'><strong>Harry Flint </strong></p>
                 <p className='text-center'><em>Senior software Engineer</em></p>
                 <p className='text-center'> There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
               </div>
             </Col>
 
-            <Col>
-              <div className='text-center my-3'><img src={ face2 } alt='face' className='border rounded-circle ' width='150'/></div>
+            <Col sm={12} md={6} lg={4}>
+              <div className='text-center my-3'><img src={ face3 } alt='face' className='border rounded-circle' width='150'/></div>
               <div>
-                <p className='text-center'><em>Senior software Engineer</em></p>
-                <p className='text-center'> There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-              </div>
-            </Col>
-
-            <Col>
-              <div className='text-center my-3'><img src={ face2 } alt='face' className='border rounded-circle' width='150'/></div>
-              <div>
-                <p className='text-center'><em>Senior software Engineer</em></p>
+                <p className='text-center'><strong>Sara Daniels</strong></p>
+                <p className='text-center'><em>Data Analyst</em></p>
                 <p className='text-center'> There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
               </div>
             </Col>

@@ -1,25 +1,29 @@
-import React, {useState, useEffect } from 'react' 
+import React from 'react' 
 import { Card, Button,  Stack, Row, Col, Container } from 'react-bootstrap' 
-import { useDispatch, useSelector } from 'react-redux'
+// import { useDispatch, useSelector } from 'react-redux'
 import news from '../media/news.jpg'
 import trustwallet1 from '../media/trustwallet1.png'
-import CourseCard from '../components/CourseCard'
+import study from '../media/study.jpg'
+import acct from '../media/acct.jpg'
+import pointer from '../media/pointer.jpg'
+// import CourseCard from '../components/CourseCard'
 import CarouselComponent from '../components/CarouselComponent'
 import AboutComponent from '../components/AboutComponent'
-import { listCourses } from '../actions/courseActions'
-import Loader from '../components/Loader'
-import Message from '../components/Message'
+// import { listCourses } from '../actions/courseActions'
+// import Loader from '../components/Loader'
+// import Message from '../components/Message'
+import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 // import axios from 'axios'
 
 function HomePage() {
-  const dispatch = useDispatch()
-  const courseList = useSelector(state => state.courseList)
-  const {error, loading, courses} = courseList
+//   const dispatch = useDispatch()
+//   const courseList = useSelector(state => state.courseList)
+//   const {error, loading, courses} = courseList
 
-  useEffect(() => {
-    dispatch(listCourses())
+//   useEffect(() => {
+//     dispatch(listCourses())
   
-  }, [dispatch]) 
+//   }, [dispatch]) 
 
 
 
@@ -36,26 +40,79 @@ function HomePage() {
 
       <AboutComponent/>
 
-                    {/* Courses Section */}
+                    {/* Courses Section */} 
+        <Container>
+            <Row className='my-3 text-center'>
+                <Col sm={12} lg={6} className='p-3' >
+                    <div>
+                        <img src={study} alt='someone learning' width='100%' className='rounded-3'/>
+                    </div>
+                </Col>
 
-        {/* <Container> 
-        	{loading ? <Loader />
-        		: error ? <Message variant='danger'>{error}</Message>
-            		:
-					<Row className='my-3'>
-						<Col><h2 className='text-center'>Courses</h2></Col>
-						<Container>
-							<Row>
-								{courses.map(course => (
-									<Col key={course._id} sm={12} md={6} lg={4} >
-										<CourseCard course={course} />
-									</Col>
-								))}
-							</Row>
-						</Container>
-					</Row>
-        	}
-        </Container> */}
+
+            <Col sm={12} lg={6} className='my-5'>
+                <div >
+                    <h2>We offer well tailored courses aimed at a 100% self improvement </h2>
+                    <div className='text-center'>
+                    <p>Master the arts of any area of your choice with our compilation of 
+                        well tailored courses designed to take you from a beginner in the industry to a professional.
+                    </p>
+                    <Link to='/courses'><Button variant='outline-warning' className='rounded-5'>View Courses</Button></Link>
+                    </div>
+                
+                </div>
+            </Col>
+            </Row>
+
+            <Row className='my-3 text-center'>
+            <Col sm={12} lg={6} className='my-5'>
+                <div >
+                    <h2>Let us help you grow your Account</h2>
+                    <div className='text-center'>
+                    <p>You Don't have to start alone.
+                        Let's us help you trade and reduce the common mistakes made by first times.
+                        Trading is a very risky business but the risks can be reduced with the right strategy.
+                    </p>
+                    <a href='https://market-snipers.com/' target='_blank' rel="noreferrer" style={{textDecoration: 'inherit'}}><Button variant='outline-warning' className='rounded-5'>Find Out More</Button></a>
+                    </div>
+                
+                </div>
+            </Col>
+
+            <Col sm={12} lg={6} className='p-3' >
+                    <div>
+                        <img src={acct} alt='phone and laptop showing trade activities' width='100%' className='rounded-3'/>
+                    </div>
+                </Col>
+            </Row>
+
+
+
+            <Row className='my-3 text-center'>
+                <Col sm={12} lg={6} className='p-3' >
+                    <div>
+                        <img src={pointer} alt='barchart on a white paper' width='100%' className='rounded-3'/>
+                    </div>
+                </Col>
+
+
+            <Col sm={12} lg={6} className='my-5'>
+                <div >
+                    <h2>Sign Up for our Mentorship Classes with top industry leaders</h2>
+                    <div className='text-center'>
+                    <p>Don't be left in the dark while learning on your own.
+                    Learn faster at your own pace with well organised classes and tutorials.
+                    Get in depth knowledge of technologies you thought you knew
+                    Master various trading skills over a wide range of technologies.
+                    </p>
+                    <Link to='/mentorship'><Button variant='outline-warning' className='rounded-5'>View Courses</Button></Link>
+                    </div>
+                
+                </div>
+            </Col>
+            </Row>
+        </Container>
+
 
                         {/** Blog Section */}
 

@@ -59,6 +59,11 @@ function OrderPage({ match }) {
         order.orderItems.forEach(function(item) {
             dispatch(payOrderItem(item._id, paymentResult))
           });
+
+         setTimeout(function(){
+                window.location.reload();
+            
+         }, 2000);
         
     }
 
