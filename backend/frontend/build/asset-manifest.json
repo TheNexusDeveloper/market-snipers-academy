@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.fb525ffb.css",
-    "main.js": "/static/js/main.a1547f25.js",
+    "main.css": "/static/css/main.cf565bab.css",
+    "main.js": "/static/js/main.ae918ffe.js",
     "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
     "static/media/AwesomeGod.mp4": "/static/media/AwesomeGod.84749144f9d31775692c.mp4",
     "static/media/learning.jpg": "/static/media/learning.ade0ef3756aedae8e507.jpg",
     "static/media/MSALOGO1.png": "/static/media/MSALOGO1.889b97b186dcef239c1e.png",
+    "static/media/msawp2.jpg": "/static/media/msawp2.b37b28a1cec96a50999c.jpg",
     "static/media/news.jpg": "/static/media/news.8beceafdde66d4cecf3b.jpg",
     "static/media/MSALOGO11.png": "/static/media/MSALOGO11.19273bfcba8715520599.png",
     "static/media/ment22.jpg": "/static/media/ment22.212b60c935e167b6824c.jpg",
     "static/media/face2.jpg": "/static/media/face2.f8bb222f313fa67dd109.jpg",
-    "static/media/msawp2.jpg": "/static/media/msawp2.491e2a212d9ac8f03884.jpg",
     "static/media/ment1.jpg": "/static/media/ment1.3a29f418af5e3e5ff5dd.jpg",
     "static/media/invest.jpg": "/static/media/invest.69610c80391db94066c5.jpg",
     "static/media/ecommerce.png": "/static/media/ecommerce.049b78878aab32e0205a.png",
     "static/media/trustwallet1.png": "/static/media/trustwallet1.3db196cace79a8a98516.png",
     "index.html": "/index.html",
-    "main.fb525ffb.css.map": "/static/css/main.fb525ffb.css.map",
-    "main.a1547f25.js.map": "/static/js/main.a1547f25.js.map",
+    "main.cf565bab.css.map": "/static/css/main.cf565bab.css.map",
+    "main.ae918ffe.js.map": "/static/js/main.ae918ffe.js.map",
     "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fb525ffb.css",
-    "static/js/main.a1547f25.js"
+    "static/css/main.cf565bab.css",
+    "static/js/main.ae918ffe.js"
   ]
 }

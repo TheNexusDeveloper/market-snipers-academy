@@ -6,11 +6,11 @@ import msawp2 from '../media/msawp2.jpg'
 function CarouselComponent() {
   return (
     <div>
-       <div class="show">
+       <div class="showcase">
         <img src={msawp2} alt="showcase"/>
         <div class="text">
             <h1>Learn the industry's leading skills on Market </h1> <span><h1>Snipers Academy</h1></span>
-            <p>While some brokers give you a hard time, we are all about making your strategies work for you. We support you every step of the way, when you grow we grow.</p>
+            <p>Looking to start a great career in the Business World, then this is the right platform for you. We have put together a team consisting of profitable individuals in the tech and business world.</p>
             <a href="/">Explore</a>
         </div>
     </div>

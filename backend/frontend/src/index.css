@@ -6,34 +6,34 @@ main{
   min-height: 80vh;
 }
 
-.show{
+.showcase{
     
     position: relative;
 }
 
-.show img{
+.showcase img{
     width: 100%;
 }
 
-.show .text{
+.showcase .text{
     position: absolute;
     color: white;
     top: 5%;
-    left: 50px;
+    left: 10%;
     width: 50%;
     
 }
 
-.show h1{
+.showcase h1{
     font-size: 3.3em;
     
 }
 
-.show p{
+.showcase p{
     font-size: larger;
 }
 
-.show a{
+.showcase a{
     display: inline-block;
     text-decoration: none;
     background-color: #CC9900;
@@ -45,47 +45,228 @@ main{
 
 }
 
-.show a:hover{
+.showcase a:hover{
     /* transform: scale(1) translateX(15px); */
     letter-spacing: 3px;
     background-color: #cc990091;
     color: #000000;
 }
 
-.show span h1{
+.showcase span h1{
     color: #cc9900;
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    .show{
-        align-items: center;
-        text-align: center;
-    }
-
-    .show .text{
-        width: 100%;
+/* xx-small devices (phones, 300px and down) */ 
+@media only screen and (max-width: 332px) {
+    .showcase .text{
+        width: 95%;
         left: 0;
-        padding: 10px;
-       
+        /* margin: 0 5px; */
+        padding: 0 5px;
+        text-align: center;
+        
     }
-    .show h1{
-        font-size: x-large;
-        line-height: 23px;
-    }
-    .show span h1{
-        line-height: 17px;
-    }
-    .show p {
+    .showcase h1{
         font-size: small;
+        margin-bottom: 0;
+        
+        
     }
 
-    .show a{
-        font-size: small;
-        margin-top: 1px;
+    .showcase p{
+        font-size: 0.49em;
+        margin-bottom: 0;
+    }
+
+    .showcase a{
+        display: inline-block;
+        text-decoration: none;
+        background-color: #CC9900;
+        padding: 5px 10px;
+        /* margin-top: 0px; */
+        color: white;
+        font-size: xx-small;
+        border-radius: 30px;
+        letter-spacing: 1px;
+    
     }
 }
+
+/* Extra small devices (phones, 332px and up) */
+@media only screen and (min-width: 332px) {
+    .showcase .text{
+        width: 90%;
+        left: 0;
+        margin: 0 10px;
+        padding: 0 10px;
+        text-align: center;
+        
+    }
+
+    .showcase h1{
+        font-size: large;
+        
+        
+        
+        
+    }
+
+    .showcase p{
+        font-size: x-small;
+    }
+
+    .showcase a{
+        display: inline-block;
+        text-decoration: none;
+        background-color: #CC9900;
+        padding: 5px 10px;
+        margin-top: 10px;
+        color: white;
+        font-size: x-small;
+        border-radius: 30px;
+        letter-spacing: 1px;
+    
+    }
+}
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
-/* @media only screen and (min-width: 600px) {...} */
+@media only screen and (min-width: 600px) {
+    .showcase .text{
+        width: 90%;
+        left: 0;
+        margin: 0 10px 0 15px;
+        padding: 0 10px;
+        text-align: center;
+        
+    }
+
+    .showcase h1{
+        font-size: 2em;
+        
+        
+    }
+
+    .showcase p{
+        font-size: medium;
+    }
+
+    .showcase a{
+        display: inline-block;
+        text-decoration: none;
+        background-color: #CC9900;
+        padding: 10px 30px;
+        margin-top: 20px;
+        font-size: medium;
+        color: white;
+        border-radius: 30px;
+        letter-spacing: 1px;
+    
+    }
+}
+
 /* Medium devices (landscape tablets, 768px and up) */
-/* @media only screen and (min-width: 768px) {...} */
+@media only screen and (min-width: 768px) {
+    .showcase .text{
+        width: 90%;
+        left: 0;
+        margin: 0 10px 0 20px;
+        padding: 0 10px;
+        text-align: center;
+        
+    }
+
+    .showcase h1{
+        font-size: 2.5em;
+        
+        
+    }
+
+    .showcase p{
+        font-size: large;
+    }
+
+    .showcase a{
+        display: inline-block;
+        text-decoration: none;
+        background-color: #CC9900;
+        padding: 10px 30px;
+        margin-top: 20px;
+        font-size: medium;
+        color: white;
+        border-radius: 30px;
+        letter-spacing: 1px;
+    
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .showcase .text{
+        position: absolute;
+        color: white;
+        top: 5%;
+        left: 10%;
+        width: 70%;
+        text-align: left;
+        
+    }
+    
+    
+    .showcase h1{
+        font-size: 3.2em;
+        
+    }
+    
+    .showcase p{
+        font-size: larger;
+    }
+
+    .showcase a{
+        display: inline-block;
+        text-decoration: none;
+        background-color: #CC9900;
+        padding: 10px 30px;
+        margin-top: 20px;
+        font-size: medium;
+        color: white;
+        border-radius: 30px;
+        letter-spacing: 1px;
+    
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .showcase .text{
+        position: absolute;
+        color: white;
+        top: 10%;
+        left: 50px;
+        width: 60%;
+        text-align: left;
+        
+    }
+    
+    
+    .showcase h1{
+        font-size: 3.5em;
+        
+    }
+    
+    .showcase p{
+        font-size: larger;
+    }
+
+    .showcase a{
+        display: inline-block;
+        text-decoration: none;
+        background-color: #CC9900;
+        padding: 10px 30px;
+        margin-top: 20px;
+        font-size: large;
+        color: white;
+        border-radius: 30px;
+        letter-spacing: 1px;
+    
+    }
+}

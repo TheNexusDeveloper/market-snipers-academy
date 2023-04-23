@@ -11,8 +11,6 @@ import Loader from '../components/Loader'
 import Message from '../components/Message'
 // import axios from 'axios'
 
-// import interswitch_logo from '../media/interswitch_logo.svg'
-
 function HomePage() {
   const dispatch = useDispatch()
   const courseList = useSelector(state => state.courseList)
