@@ -47,6 +47,7 @@ INSTALLED_APPS = [
 
     'rest_framework',
     "corsheaders",
+    "six",
 ]
 
 REST_FRAMEWORK = {
@@ -187,7 +188,13 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 MEDIA_ROOT = 'static/media' 
 
-
+#SMTP Configuration 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True  
+EMAIL_HOST = 'smtp.gmail.com'  
+EMAIL_HOST_USER = 'devtest646576@gmail.com'  
+EMAIL_HOST_PASSWORD = 'pmvsppcxugjlllkp'  
+EMAIL_PORT = 587 
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

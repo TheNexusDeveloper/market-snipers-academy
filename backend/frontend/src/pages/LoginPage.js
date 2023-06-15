@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react' 
-import { Link } from 'react-router-dom'
+import { Link} from 'react-router-dom'
 import { Form, Button, Row, Col } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Loader from '../components/Loader'
@@ -26,9 +26,9 @@ function Loginpage({location, history}) {
         e.preventDefault()
         dispatch(login(email, password))
         // if (userInfo){
-            // setTimeout(function(){
-            //     window.location.reload()
-            // }, 2000)
+        //     setTimeout(function(){
+        //         window.location.reload()
+        //     }, 2000)
         // }
         // setTimeout(function(){
         //     if (userInfo){
@@ -43,12 +43,13 @@ function Loginpage({location, history}) {
     useEffect(() => {
         if (userInfo) {
             
+            
             history.push('/')
             window.location.reload()
         }
     },  [history, userInfo])
 
-    
+
 
     const handleReload = () =>{
         window.location.reload()
@@ -99,7 +100,16 @@ function Loginpage({location, history}) {
         </Form>
 
         <Row className='py-3'>
-            <Col>
+            <Col> 
+                <Col>
+                    <Link
+                        to={`reset_password/`}
+                    >
+                        Forgot Password ?
+                    </Link>
+                </Col>
+                
+                <br/>
                 Don't Have an account? <Link 
                         to={redirect ? `/register?redirect=${redirect}` : '/register'} 
                         >

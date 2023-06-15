@@ -1,0 +1,15 @@
+For Hosting(Digital Ocean)....
+VM hosting cost - $7 per month
+database cost - $15 per month(might require a higher plan as the database grows) 
+
+Total cost per month - $22 per month = $264 per year 
+
+
+Domain name reg(namecheap.com)...
+marketsnipersacademy.com - $7.98 per year
+ICANN fee - $0.18 per year
+premium DNS - $2.98 one time purchase 
+SSL certificate - $5.99 per year 
+pro email - free for first 2 months 
+
+Total = $17.13
