@@ -1,11 +1,12 @@
 {
   "files": {
     "main.css": "/static/css/main.be1e72b9.css",
-    "main.js": "/static/js/main.6fa69aac.js",
+    "main.js": "/static/js/main.6518187d.js",
     "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
     "static/media/AwesomeGod.mp4": "/static/media/AwesomeGod.84749144f9d31775692c.mp4",
     "static/media/pointer.jpg": "/static/media/pointer.8c7a16e050422bd4327a.jpg",
     "static/media/face3.jpg": "/static/media/face3.2c288976e75698f0d3cc.jpg",
+    "static/media/ment1.jpg": "/static/media/ment1.3cb6d2c3ca511ab3a24c.jpg",
     "static/media/acct.jpg": "/static/media/acct.d40d6990348c80339cff.jpg",
     "static/media/learning.jpg": "/static/media/learning.ade0ef3756aedae8e507.jpg",
     "static/media/MSALOGO1.png": "/static/media/MSALOGO1.889b97b186dcef239c1e.png",
@@ -16,18 +17,17 @@
     "static/media/MSALOGO11.png": "/static/media/MSALOGO11.19273bfcba8715520599.png",
     "static/media/ment22.jpg": "/static/media/ment22.212b60c935e167b6824c.jpg",
     "static/media/face2.jpg": "/static/media/face2.f8bb222f313fa67dd109.jpg",
-    "static/media/ment1.jpg": "/static/media/ment1.3a29f418af5e3e5ff5dd.jpg",
     "static/media/invest.jpg": "/static/media/invest.69610c80391db94066c5.jpg",
     "static/media/ecommerce.png": "/static/media/ecommerce.049b78878aab32e0205a.png",
     "static/media/favicon.ico": "/static/media/favicon.cc00c1f523b6f5936e8e.ico",
     "static/media/trustwallet1.png": "/static/media/trustwallet1.3db196cace79a8a98516.png",
     "index.html": "/index.html",
     "main.be1e72b9.css.map": "/static/css/main.be1e72b9.css.map",
-    "main.6fa69aac.js.map": "/static/js/main.6fa69aac.js.map",
+    "main.6518187d.js.map": "/static/js/main.6518187d.js.map",
     "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.be1e72b9.css",
-    "static/js/main.6fa69aac.js"
+    "static/js/main.6518187d.js"
   ]
 }
